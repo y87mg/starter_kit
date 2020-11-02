@@ -1,0 +1,10 @@
+{
+  "extends": "stylelint-config-sass-guidelines",
+  "rules": {
+    "comment-empty-line-before": [ "never", {
+      "ignore": ["after-comment"]
+    }],
+    "selector-no-vendor-prefix": [false, {}],
+    "scss/at-import-partial-extension-blacklist": []
+  }
+}

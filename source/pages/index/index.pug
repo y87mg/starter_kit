@@ -1,0 +1,14 @@
+extends ../../layout/layout
+include ../../components/header/header
+
+block variables
+  - title = `Главная страница`
+  - data = require(`./data`)
+
+block header
+  +header(data.header, `page__header`)
+
+block main
+
+block footer
+

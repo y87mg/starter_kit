@@ -1,0 +1,33 @@
+@import './styles/destyle.scss';
+@import './styles/fonts.scss';
+@import './styles/variables.scss';
+@import './styles/mixins.scss';
+
+html {
+  font-size: 16px;
+}
+
+body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: Montserrat, Arial, sans-serif;
+  font-size: 1rem;
+  color: #000;
+  background-color: #fff;
+}
+
+.visually-hidden,
+input[type='checkbox'].visually-hidden,
+input[type='radio'].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}

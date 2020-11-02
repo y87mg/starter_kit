@@ -1,0 +1,2 @@
+//styles
+import './layout.scss';
