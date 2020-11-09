@@ -2,7 +2,7 @@ const { merge } = require('webpack-merge');
 const baseWebpackConfig = require('./webpack.config');
 const pug = require('./modules/pug');
 const html = require('./modules/html');
-const extractCSS = require('./modules/css_extract');
+const css = require('./modules/css');
 const providePlugin = require('./modules/provide_plugin');
 const images = require('./modules/images');
 const fonts = require('./modules/fonts');
@@ -23,7 +23,7 @@ module.exports = merge(
   babel,
   copy,
   html,
-  extractCSS,
+  css,
   images,
   pug,
   providePlugin,

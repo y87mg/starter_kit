@@ -1,10 +1,11 @@
 const { merge } = require('webpack-merge');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const baseWebpackConfig = require('./webpack.config');
 const watch = require('./modules/watch');
 const imagesMin = require('./modules/images_min');
 const pug = require('./modules/pug');
 const html = require('./modules/html');
-const extractCSS = require('./modules/css_extract');
+const css = require('./modules/css');
 const providePlugin = require('./modules/provide_plugin');
 const images = require('./modules/images');
 const fonts = require('./modules/fonts');
@@ -40,13 +41,18 @@ module.exports = merge(
         },
       },
     },
+    plugins: [
+      new CleanWebpackPlugin({
+        cleanStaleWebpackAssets: false,
+      }),
+    ],
   },
   baseWebpackConfig,
   watch,
   babel,
   copy,
   html,
-  extractCSS,
+  css,
   images,
   imagesMin,
   pug,

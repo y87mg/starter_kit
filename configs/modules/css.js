@@ -3,8 +3,21 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const cssLoader = 'css-loader';
 const postCssLoader = 'postcss-loader';
 const postCssLoaderOptions = {
-  config: {
-    path: 'configs/modules/postcss.config.js',
+  postcssOptions: {
+    plugins: [
+      require('autoprefixer')({ grid: 'autoplace' }),
+      require('css-mqpacker'),
+      require('cssnano')({
+        preset: [
+          'default',
+          {
+            discardComments: {
+              removeAll: true,
+            },
+          },
+        ],
+      }),
+    ],
   },
 };
 
