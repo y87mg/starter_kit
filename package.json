@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "server": "static -a 0.0.0.0 build",
+    "server": "static build",
     "build": "webpack --config ./configs/webpack.build.config.js",
     "dev": "webpack-dev-server --config ./configs/webpack.dev.config.js",
     "watch": "webpack --watch --config ./configs/webpack.build.config.js"
