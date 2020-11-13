@@ -4,9 +4,9 @@ module.exports = {
       {
         test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
         include: /fonts/,
-        type: 'asset/resource',
-        generator: {
-          filename: 'fonts/[name][ext]'
+        loader: 'file-loader',
+        options: {
+          name: 'fonts/[name].[ext]'
         }
       },
     ],

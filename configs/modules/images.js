@@ -4,9 +4,9 @@ module.exports = {
       {
         test: /\.(jpe?g|png|svg|webp|gif|ico)$/,
         exclude: /fonts/,
-        type: 'asset/resource',
-        generator: {
-          filename: 'images/[name][ext]',
+        loader: 'file-loader',
+        options: {
+          name: 'images/[name].[ext]',
         },
       },
     ],
