@@ -18,6 +18,9 @@ module.exports = {
             prefixIds: true,
             removeElementsByAttr: true,
           },
+          webp: {
+            quality: 90
+          }
         },
       },
     ],

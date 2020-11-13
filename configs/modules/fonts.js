@@ -2,12 +2,12 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(ttf|eot|woff|svg|woff2)$/,
+        test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
         include: /fonts/,
         loader: 'file-loader',
         options: {
-          name: 'fonts/[name].[ext]',
-        },
+          name: 'fonts/[name].[ext]'
+        }
       },
     ],
   },

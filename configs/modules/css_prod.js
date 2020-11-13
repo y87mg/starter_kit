@@ -1,7 +1,5 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-const cssLoader = 'css-loader';
-const postCssLoader = 'postcss-loader';
 const postCssLoaderOptions = {
   postcssOptions: {
     plugins: [
@@ -39,10 +37,10 @@ module.exports = {
             },
           },
           {
-            loader: cssLoader,
+            loader: 'css-loader',
           },
           {
-            loader: postCssLoader,
+            loader: 'postcss-loader',
             options: postCssLoaderOptions,
           },
           {
@@ -57,10 +55,10 @@ module.exports = {
             loader: MiniCssExtractPlugin.loader,
           },
           {
-            loader: cssLoader,
+            loader: 'css-loader',
           },
           {
-            loader: postCssLoader,
+            loader: 'postcss-loader',
             options: postCssLoaderOptions,
           },
         ],

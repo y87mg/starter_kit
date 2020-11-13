@@ -5,7 +5,7 @@ const watch = require('./modules/watch');
 const imagesMin = require('./modules/images_min');
 const pug = require('./modules/pug');
 const html = require('./modules/html');
-const css = require('./modules/css');
+const css_prod = require('./modules/css_prod');
 const providePlugin = require('./modules/provide_plugin');
 const images = require('./modules/images');
 const fonts = require('./modules/fonts');
@@ -52,7 +52,7 @@ module.exports = merge(
   babel,
   copy,
   html,
-  css,
+  css_prod,
   images,
   imagesMin,
   pug,

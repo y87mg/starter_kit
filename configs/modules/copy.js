@@ -13,11 +13,6 @@ module.exports = {
           to: `${build}`,
           toType: 'dir',
         },
-        {
-          from: `${source}/layout/favicon/img/google-touch-sunny.png`,
-          to: `${build}/images`,
-          toType: 'dir',
-        },
       ],
     }),
   ],

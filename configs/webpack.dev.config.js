@@ -2,7 +2,7 @@ const { merge } = require('webpack-merge');
 const baseWebpackConfig = require('./webpack.config');
 const pug = require('./modules/pug');
 const html = require('./modules/html');
-const css = require('./modules/css');
+const css_dev = require('./modules/css_dev');
 const providePlugin = require('./modules/provide_plugin');
 const images = require('./modules/images');
 const fonts = require('./modules/fonts');
@@ -14,8 +14,9 @@ module.exports = merge(
     mode: 'development',
     devtool: 'eval-source-map',
     devServer: {
+      contentBase: baseWebpackConfig.externals.paths.source,
       open: true,
-      noInfo: true,
+      compress: true,
       port: 2717,
     },
   },
@@ -23,7 +24,7 @@ module.exports = merge(
   babel,
   copy,
   html,
-  css,
+  css_dev,
   images,
   pug,
   providePlugin,
