@@ -1,5 +1,7 @@
-mixin header(options = {}, className = ``)
+mixin header(options = {})
 
-  header(class = `header ${className}`)
+  - className = options.className ? options.className : '';
+
+  header(class = `${className} header`)
     div(class = `header__inner`)
       h1(class = `header__title`) #{options.title}

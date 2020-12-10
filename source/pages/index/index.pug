@@ -6,7 +6,7 @@ block variables
   - data = require(`./data`)
 
 block header
-  +header(data.header, `page__header`)
+  +header({ data: data.header, className: `page__header`})
 
 block main
 
