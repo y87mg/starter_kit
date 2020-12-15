@@ -43,7 +43,7 @@ module.exports = merge(
     },
     plugins: [
       new CleanWebpackPlugin({
-        cleanStaleWebpackAssets: false,
+        cleanStaleWebpackAssets: true,
       }),
     ],
   },

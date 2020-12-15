@@ -2,11 +2,11 @@ extends ../../layout/layout
 include ../../components/header/header
 
 block variables
-  - title = `Главная страница`
-  - data = require(`./data`)
+  - title = 'Главная страница'
+  - data = require('./data')
 
 block header
-  +header({ data: data.header, className: `page__header`})
+  +header({ data: data.header, className: 'page__header'})
 
 block main
 
