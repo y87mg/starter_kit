@@ -9,14 +9,18 @@ html {
 
 body {
   position: relative;
+
   display: flex;
   flex-direction: column;
   min-width: 320px;
   min-height: 100vh;
-  background-color: #fff;
-  font-family: Montserrat, Arial, sans-serif;
-  font-size: 1rem;
-  color: #000;
+
+  font-family: Tahoma, sans-serif;
+  font-size: 1.125rem;
+  line-height: 25px;
+  color: #164a44;
+
+  background-color: #b2d9d0;
 }
 
 .visually-hidden,
