@@ -9,7 +9,7 @@ module.exports = {
     new CopyPlugin({
       patterns: [
         {
-          from: `${source}/layout/manifest.json`,
+          from: `${source}/assets/manifest.json`,
           to: `${build}`,
           toType: 'dir',
         },
