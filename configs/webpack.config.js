@@ -9,14 +9,14 @@ const PATHS = {
 //Папка с моими страницами
 const pages = `${PATHS.source}/pages`;
 
-const getNamesArray = function() {
+const getNamesArray = function () {
   const arrayData = [];
   let name = null;
-  fs.readdirSync(pages, 'utf-8').forEach(function(item) {
+  fs.readdirSync(pages, 'utf-8').forEach(function (item) {
     try {
       name = JSON.parse(fs.readFileSync(`${pages}/${item}/data.json`, 'utf-8')).name;
       arrayData.push(name);
-    } catch(err) {
+    } catch (err) {
       console.log(err.message);
       console.log(err.stack);
     }
@@ -33,7 +33,7 @@ const externals = {
   pagesArray: pagesArray,
 };
 
-const getPages = function(theArray) {
+const getPages = function (theArray) {
   let theObject = {};
   for (let i = 0; i < theArray.length; i++) {
     theObject[theArray[i]] = `${pages}/${theArray[i]}/${theArray[i]}.js`;

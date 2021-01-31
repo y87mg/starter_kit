@@ -30,9 +30,7 @@ module.exports = merge(
             name(module) {
               // получает имя, то есть node_modules/packageName/not/this/part.js
               // или node_modules/packageName
-              const packageName = module.context.match(
-                /[\\/]node_modules[\\/](.*?)([\\/]|$)/,
-              )[1];
+              const packageName = module.context.match(/[\\/]node_modules[\\/](.*?)([\\/]|$)/)[1];
               // имена npm-пакетов можно, не опасаясь проблем, использовать
               // в URL, но некоторые серверы не любят символы наподобие @
               return `${packageName.replace('@', '')}`;
@@ -43,7 +41,7 @@ module.exports = merge(
     },
     plugins: [
       new CleanWebpackPlugin({
-        cleanStaleWebpackAssets: true,
+        cleanStaleWebpackAssets: false,
       }),
     ],
   },

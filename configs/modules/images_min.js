@@ -19,8 +19,8 @@ module.exports = {
             removeElementsByAttr: true,
           },
           webp: {
-            quality: 90
-          }
+            quality: 90,
+          },
         },
       },
     ],
