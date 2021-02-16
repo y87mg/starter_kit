@@ -1,2 +1,1 @@
 require.context('./img');
-
