@@ -1,14 +1,17 @@
 extends ../../base/base
 include ../../components/header/header
+include ../../components/main/main
+include ../../components/footer/footer
 
 block variables
   - title = 'Главная страница'
   - data = require('./data')
 
 block header
-  +header({ data: data.header, className: 'page__header'})
+  +header({ data: data, className: 'page__header'})
 
 block main
+  +main({ data: data, className: 'page__main' })
 
 block footer
-
+  +footer({ data: data, className: 'page__footer' })

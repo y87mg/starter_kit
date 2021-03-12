@@ -1,0 +1,3 @@
+//styles
+import './main.scss';
+
