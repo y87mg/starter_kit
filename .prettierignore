@@ -1,12 +1,5 @@
-.DS_Store
-.idea
-*.ai
-*.log
-*.pdf
-*.psd
-*.sublime*
-build/
-dist/
+# Вспомогательные файлы
 node_modules/
-npm-debug.*
-Thumbs.db
+
+#Директории проекта
+build/
