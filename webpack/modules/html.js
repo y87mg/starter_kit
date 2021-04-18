@@ -1,5 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const baseConfigWebpack = require('../webpack.config');
+const baseConfigWebpack = require('../common.config');
 
 // common chunks - 'webpack', 'common'
 

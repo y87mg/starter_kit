@@ -1,8 +1,8 @@
 const CopyPlugin = require('copy-webpack-plugin');
-const baseConfigWebpack = require('../webpack.config');
+const baseConfigWebpack = require('../common.config');
 
-const source = baseConfigWebpack.externals.paths.source; //Папка source
-const build = baseConfigWebpack.externals.paths.build; //Папка build
+const source = baseConfigWebpack.externals.paths.source; //Папка src
+const build = baseConfigWebpack.externals.paths.build; //Папка public
 
 module.exports = {
   plugins: [

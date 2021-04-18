@@ -1,5 +1,5 @@
 const { merge } = require('webpack-merge');
-const baseWebpackConfig = require('./webpack.config');
+const baseWebpackConfig = require('./common.config');
 const pug = require('./modules/pug');
 const html = require('./modules/html');
 const css_dev = require('./modules/css_dev');

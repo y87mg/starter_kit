@@ -1,4 +1,4 @@
-const ignoreList = ['source', 'node_modules', 'configs'];
+const ignoreList = ['src', 'node_modules', 'webpack'];
 
 module.exports = {
   watchOptions: {
