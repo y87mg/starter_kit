@@ -1,6 +1,6 @@
 const { merge } = require('webpack-merge');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const baseWebpackConfig = require('./common.config');
+const baseWebpackConfig = require('./config');
 const watch = require('./modules/watch');
 const imagesMin = require('./modules/images_min');
 const pug = require('./modules/pug');
