@@ -11,13 +11,16 @@ const pages = `${PATHS.source}/pages`;
 
 const getNamesArray = function () {
   const arrayData = [];
-  let name = null;
   fs.readdirSync(pages, 'utf-8').forEach(function (item) {
     try {
-      name = JSON.parse(fs.readFileSync(`${pages}/${item}/data.json`, 'utf-8')).name;
+      let name = JSON.parse(fs.readFileSync(`${pages}/${item}/data.json`, 'utf-8')).name;
+
+      if(!name) {
+        throw new Error("В data.json отсутствует свойство - name...!");
+      }
+
       arrayData.push(name);
     } catch (err) {
-      console.log(err.message);
       console.log(err.stack);
     }
   });
