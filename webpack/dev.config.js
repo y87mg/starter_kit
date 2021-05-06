@@ -12,7 +12,7 @@ const copy = require('./modules/copy');
 module.exports = merge(
   {
     mode: 'development',
-    devtool: 'eval-source-map',
+    devtool: 'source-map',
     devServer: {
       contentBase: baseWebpackConfig.externals.paths.source,
       open: true,

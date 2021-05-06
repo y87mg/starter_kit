@@ -2,8 +2,8 @@ const fs = require('fs');
 const path = require('path');
 
 const PATHS = {
-  source: path.resolve(__dirname, '../src'),
-  build: path.resolve(__dirname, '../public'),
+  source: path.join(__dirname, '../src'),
+  build: path.join(__dirname, '../public'),
 };
 
 //Папка с моими страницами
